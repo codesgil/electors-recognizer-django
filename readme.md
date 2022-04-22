@@ -1,5 +1,7 @@
 # electors-recognizer-django
 
+Notre machine prendra une image faciale en entrée de chaque électeur à l’aide d’un système de reconnaissance faciale basé sur un CNN profond avec alignement des visages Dlib, la vérifie avec un ensemble d’images faciales des électeurs enregistrés dans la base de données qui ont été prise lors de la phase pré-électorale, le résultat étant positif suppose qu’il peut voter pour un candidat. Après le vote, le système confirme le vote par ré-capture de l’image faciale du votant et il lui délivre un court message texte, ce qui garantit qu’il ne vote qu’une seul fois.
+
 Notre projet est divisé en deux projets:
 -electors-recognizer-django
 -electors-recognizer-vuejs
