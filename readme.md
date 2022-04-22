@@ -27,5 +27,5 @@ les étapes de démarage:
 - deuxièmement demarrer ensuite pgadmin4
 -troisièmement demarrer enfin l'exécutable dans le projet elector-recognizer-vuejs: 
 ouvrez un autre terminal: accéder au dossier du projet elector-recognizer-vuejs par la commande cd /chemin_du dossier
-ensuite tapper la commande  npm run serve
+ensuite taper les commandes successives  pour la prmière utilisation : npm run serve ; npm run build ; npm run lint; mais pour la seconde utilisation tapez uniquement la commande npm run serve
 et enfin ouvrez lz navigateur à l'adresse: http://localhost:8085/
