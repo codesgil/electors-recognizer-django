@@ -1,0 +1,19 @@
+- model: users.profile
+  pk: 1
+  fields:
+    first_name: Admin
+    last_name: LMT
+    phone: 237693878942
+    email: rickelquentin@gmail.com
+    update_at: 2020-08-13 16:48:52
+- model: users.User
+  pk: 1
+  fields:
+    username: rickel
+    role: ROLE_SUPER_ADMIN
+    password: pbkdf2_sha256$180000$qsBHVWTYcygq$GyHihPL+c7phpjZPo9TA8AzW3+UEmbzFUMzJkj00pss=
+    is_active: true
+    created_at: 2020-07-21 09:48:52
+    update_at: 2020-07-21 09:48:52
+    profile: 1
+

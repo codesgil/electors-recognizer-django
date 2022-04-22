@@ -1,0 +1,837 @@
+2020-05-25 10:13:24,548  ERROR  8388  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 27, in upload_elector_picture_view
+    response['elector'] = serializer.data
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 500, in to_representation
+    for field in fields:
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 361, in _readable_fields
+    for field in self.fields.values():
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\utils\functional.py", line 48, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 349, in fields
+    for key, value in self.get_fields().items():
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 1029, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 1101, in get_field_names
+    assert not (fields is None and exclude is None), (
+AssertionError: ("Creating a ModelSerializer without either the 'fields' attribute or the 'exclude' attribute has been deprecated since 3.3.0, and is now disallowed. Add an explicit fields = '__all__' to the ElectorSerializers serializer.",)
+  
+2021-02-20 22:16:26,573  ERROR  13836  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 26, in upload_elector_picture_view
+    data['picture'] = get_image_from_data_url(data['picture'])[0]
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\http\request.py", line 491, in __setitem__
+    self._assert_mutable()
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+  
+2021-02-20 22:25:46,137  ERROR  13452  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 26, in upload_elector_picture_view
+    del data['picture']
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\http\request.py", line 497, in __delitem__
+    self._assert_mutable()
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+  
+2021-02-20 22:25:48,013  ERROR  13452  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 26, in upload_elector_picture_view
+    del data['picture']
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\http\request.py", line 497, in __delitem__
+    self._assert_mutable()
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\http\request.py", line 488, in _assert_mutable
+    raise AttributeError("This QueryDict instance is immutable")
+AttributeError: This QueryDict instance is immutable
+  
+2021-02-20 22:42:01,723  ERROR  9756  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:42:12,224  ERROR  9756  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:42:50,120  ERROR  17368  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:43:26,851  ERROR  6476  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 30, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:44:06,908  ERROR  14248  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:45:42,902  ERROR  14248  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:46:42,738  ERROR  7148  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 30, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:47:53,416  ERROR  16700  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-20 22:51:17,113  ERROR  16416  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 35, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else file)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 22, in handle_uploaded_file
+    for chunk in f.chunks():
+AttributeError: '_io.BufferedWriter' object has no attribute 'chunks'
+  
+2021-02-21 14:20:27,544  ERROR  13280  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:21:59,669  ERROR  13280  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:27:12,351  ERROR  13280  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:31:05,390  ERROR  13280  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:33:13,217  ERROR  9864  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:34:00,883  ERROR  14236  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:34:56,839  ERROR  18436  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 28, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:35:46,974  ERROR  11344  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:36:17,763  ERROR  17060  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:37:45,738  ERROR  13360  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:38:06,086  ERROR  7648  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:39:37,201  ERROR  15380  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 29, in upload_elector_picture_view
+    file_dir = handle_uploaded_file(request.FILES['picture'] if request.FILES else form.data['picture'])
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 19, in handle_uploaded_file
+    filename = directory + os.sep + str(time.time()).replace('.', '') + '.' + str(f.name).split('.')[1]
+AttributeError: 'NoneType' object has no attribute 'name'
+  
+2021-02-21 14:54:10,418  ERROR  9764  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\decorators.py", line 50, in handler
+    return func(*args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 31, in upload_elector_picture_view
+    request.FILES['picture'] if request.FILES else decode_base64_file(request.data['picture']))
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 32, in decode_base64_file
+    file_extension = get_file_extension(file_name, decoded_file)
+TypeError: get_file_extension() missing 1 required positional argument: 'decoded_file'
+  
+2021-02-21 20:05:06,038  ERROR  8008  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 78, in has_vote
+    elector__id=have_vote['elector'].id).last()
+KeyError: 'elector'
+  
+2021-02-21 21:17:44,070  ERROR  12308  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 98, in mark_vote
+    elector__id=have_vote['matricule'].id).last()
+KeyError: 'elector'
+  
+2021-02-21 21:18:08,341  ERROR  12308  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 98, in mark_vote
+    elector__id=have_vote['matricule'].id).last()
+KeyError: 'elector'
+  
+2021-03-31 19:28:38,491  ERROR  17952  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "D:\projets\python\elector-recognizer\globals\pagination.py", line 21, in paginate_queryset
+    return super(CustomPagination, self).paginate_queryset(queryset, request, view=view)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\pagination.py", line 218, in paginate_queryset
+    return list(self.page)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\core\paginator.py", line 143, in __len__
+    return len(self.object_list)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 269, in __len__
+    self._fetch_all()
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+  
+2021-03-31 19:30:03,742  ERROR  17952  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "D:\projets\python\elector-recognizer\globals\pagination.py", line 21, in paginate_queryset
+    return super(CustomPagination, self).paginate_queryset(queryset, request, view=view)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\pagination.py", line 218, in paginate_queryset
+    return list(self.page)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\core\paginator.py", line 143, in __len__
+    return len(self.object_list)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 269, in __len__
+    self._fetch_all()
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+  
+2021-03-31 19:30:12,425  ERROR  17952  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "D:\projets\python\elector-recognizer\globals\pagination.py", line 21, in paginate_queryset
+    return super(CustomPagination, self).paginate_queryset(queryset, request, view=view)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\pagination.py", line 218, in paginate_queryset
+    return list(self.page)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\core\paginator.py", line 143, in __len__
+    return len(self.object_list)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 269, in __len__
+    self._fetch_all()
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+  
+2021-03-31 19:31:19,494  ERROR  17952  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "D:\projets\python\elector-recognizer\globals\pagination.py", line 21, in paginate_queryset
+    return super(CustomPagination, self).paginate_queryset(queryset, request, view=view)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\pagination.py", line 218, in paginate_queryset
+    return list(self.page)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\core\paginator.py", line 143, in __len__
+    return len(self.object_list)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 269, in __len__
+    self._fetch_all()
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 1308, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1156, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: ERREUR:  la colonne elector.gender n'existe pas
+LINE 1: ... "elector"."birth_date", "elector"."birth_place", "elector"....
+                                                             ^
+
+  
+2021-07-23 20:50:11,394  ERROR  3520  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 265, in vote_office
+    instance.voteOffice = voteOffice
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\fields\related_descriptors.py", line 215, in __set__
+    raise ValueError(
+ValueError: Cannot assign "{'voteOffice': <VoteOffice: VoteOffice object (1)>}": "Elector.voteOffice" must be a "VoteOffice" instance.
+  
+2021-08-14 10:10:03,879  ERROR  15012  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  54  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'tuple' object has no attribute 'elector'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 106, in has_vote
+    response['vote'] = serializer.data
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\serializers.py", line 502, in to_representation
+    attribute = field.get_attribute(instance)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `elector` on serializer `VoteSerializers`.
+The serializer field might be named incorrectly and not match any attribute or key on the `tuple` instance.
+Original exception text was: 'tuple' object has no attribute 'elector'.
+  
+2021-08-16 21:41:07,052  ERROR  7976  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 176, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 107, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 116, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 21:41:25,688  ERROR  7976  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 176, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 107, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 116, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 21:43:45,083  ERROR  6368  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 177, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 107, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 116, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 21:44:17,094  ERROR  14088  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 177, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 107, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 116, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 21:44:39,614  ERROR  19084  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 178, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 107, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 116, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 21:44:58,483  ERROR  16436  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 177, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 107, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 116, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 21:45:54,205  ERROR  7652  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 176, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 107, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 117, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 21:46:50,195  ERROR  18164  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  53  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 131, in mark_vote
+    send_mt(elector=vote.elector)
+  File "D:\projets\python\elector-recognizer\core\helpers.py", line 176, in send_mt
+    send_sms(content=message, sender=MT_SENDER, phone=phone)
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 108, in send_sms
+    'phone': format_phone(phone),
+  File "D:\projets\python\elector-recognizer\globals\utils.py", line 118, in format_phone
+    result = re.match('^237', phone)
+NameError: name 're' is not defined
+  
+2021-08-16 22:42:16,449  ERROR  4400  D:\projets\python\elector-recognizer\http_client\client.py  send_request  86  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\http_client\client.py", line 71, in send_request
+    'body': json.loads(str(data))
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  
+2021-08-16 23:24:20,434  ERROR  14640  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 242, in export
+    queryset = self.filter_queryset(self.get_queryset()).values_list("matricule", "name", "surname", "birthDate",
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 868, in values_list
+    clone = self._values(*_fields, **expressions)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 836, in _values
+    clone.query.set_values(fields)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 2174, in set_values
+    self.add_fields(field_names, True)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 1863, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 1565, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'elector' into field. Choices are: birthDate, birthPlace, created, deleted, gender, id, localisation, matricule, name, phone, surname, updated, vote, voteOffice, voteOffice_id
+  
+2021-08-16 23:24:36,943  ERROR  14640  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 242, in export
+    queryset = self.filter_queryset(self.get_queryset()).values_list("matricule", "name", "surname", "birthDate",
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 868, in values_list
+    clone = self._values(*_fields, **expressions)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\query.py", line 836, in _values
+    clone.query.set_values(fields)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 2174, in set_values
+    self.add_fields(field_names, True)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 1863, in add_fields
+    join_info = self.setup_joins(name.split(LOOKUP_SEP), opts, alias, allow_many=allow_m2m)
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 1565, in setup_joins
+    path, final_field, targets, rest = self.names_to_path(
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\django\db\models\sql\query.py", line 1481, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'elector' into field. Choices are: birthDate, birthPlace, created, deleted, gender, id, localisation, matricule, name, phone, surname, updated, vote, voteOffice, voteOffice_id
+  
+2021-08-16 23:44:21,653  ERROR  20632  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 161, in export
+    rows1 = Elector.objects.exlude(id__in=[vote.elector.id for vote in Vote.objects.all()])
+AttributeError: 'Manager' object has no attribute 'exlude'
+  
+2021-08-16 23:44:59,882  ERROR  22276  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 162, in export
+    sheet1 = self.format_export_excel_rows(sheet=sheet1, rows=rows1)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 172, in format_export_excel_rows
+    for col_num in range(len(row)):
+TypeError: object of type 'Elector' has no len()
+  
+2021-08-17 00:14:39,223  ERROR  14284  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 155, in export
+    rows1 = self.format_electors(rows=rows1)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 171, in format_electors
+    row.append(None)
+AttributeError: 'tuple' object has no attribute 'append'
+  
+2021-08-17 00:14:59,794  ERROR  12188  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 155, in export
+    rows1 = self.format_electors(rows=rows1)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 172, in format_electors
+    row.append(None)
+AttributeError: 'tuple' object has no attribute 'append'
+  
+2021-08-17 00:19:25,500  ERROR  3192  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 155, in export
+    rows1 = self.format_electors(rows=rows1)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 171, in format_electors
+    row.insert(None)
+AttributeError: 'tuple' object has no attribute 'insert'
+  
+2021-08-17 00:20:40,022  ERROR  3968  D:\projets\python\elector-recognizer\globals\utils.py  core_exception_handler  56  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 155, in export
+    rows1 = self.format_electors(rows=rows1)
+  File "D:\projets\python\elector-recognizer\core\views.py", line 172, in format_electors
+    row.insert(None)
+AttributeError: 'tuple' object has no attribute 'insert'
+  
+2021-08-19 13:26:28,281  ERROR  7616  D:\projets\python\elector-recognizer\http_client\client.py  send_request  86  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\http_client\client.py", line 71, in send_request
+    'body': json.loads(str(data))
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  
+2021-11-10 16:15:11,274  ERROR  15600  D:\projets\python\elector-recognizer\http_client\client.py  send_request  80  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\http_client\client.py", line 64, in send_request
+    conn.request(method=self.__METHOD, url=self.__URI, body=self.__DATA, headers=self.__HEADERS)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\http\client.py", line 1255, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\http\client.py", line 1301, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\http\client.py", line 1250, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\http\client.py", line 1010, in _send_output
+    self.send(msg)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\http\client.py", line 950, in send
+    self.connect()
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\http\client.py", line 1417, in connect
+    super().connect()
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\http\client.py", line 921, in connect
+    self.sock = self._create_connection(
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+  
+2021-11-10 16:18:26,340  ERROR  11060  D:\projets\python\elector-recognizer\http_client\client.py  send_request  86  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\http_client\client.py", line 71, in send_request
+    'body': json.loads(str(data))
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  
+2021-12-09 14:15:54,745  ERROR  13872  D:\projets\python\elector-recognizer\http_client\client.py  send_request  86  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\http_client\client.py", line 71, in send_request
+    'body': json.loads(str(data))
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  
+2021-12-20 12:49:58,879  ERROR  5368  D:\projets\python\elector-recognizer\http_client\client.py  send_request  86  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\http_client\client.py", line 71, in send_request
+    'body': json.loads(str(data))
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  
+2022-01-15 14:10:26,060  ERROR  4744  D:\projets\python\elector-recognizer\http_client\client.py  send_request  86  Traceback (most recent call last):
+  File "D:\projets\python\elector-recognizer\http_client\client.py", line 71, in send_request
+    'body': json.loads(str(data))
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\__init__.py", line 357, in loads
+    return _default_decoder.decode(s)
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "c:\users\hp\appdata\local\programs\python\python38\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+  

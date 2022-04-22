@@ -1,0 +1,3 @@
+Dand pgAdmin 
+pass(admin):azerty
+pass (user):postgres
