@@ -1,31 +1,31 @@
 # electors-recognizer-django
 
-Notre machine prendra une image faciale en entrée de chaque électeur à l’aide d’un système de reconnaissance faciale basé sur un CNN profond avec alignement des visages Dlib, la vérifie avec un ensemble d’images faciales des électeurs enregistrés dans la base de données qui ont été prise lors de la phase pré-électorale, le résultat étant positif suppose qu’il peut voter pour un candidat. Après le vote, le système confirme le vote par ré-capture de l’image faciale du votant et il lui délivre un court message texte, ce qui garantit qu’il ne vote qu’une seul fois.
+Our machine takes an input facial image of each voter using a deep CNN-based facial recognition system with Dlib face alignment, checks it against a set of facial images of voters registered in the database that were taken during the pre-election phase, the result being positive implies that he can vote for a candidate. After the vote has been cast, the system confirms the vote by re-capturing the voter's facial image and delivering a short text message, ensuring that the voter only votes once.
 
-Notre projet est divisé en deux projets:
+Our project is divided into two parts:
 -electors-recognizer-django
 -electors-recognizer-vuejs
 
-pour exécuter ces projets vous devez installer un SGBD en particulier posgresql (pgadmin4). ENsuite chaque projet possède son readme et son fichier requirement qui vous donnera plus d'informations sur les dépendances et la manière d'exécuter.
+to run these projects, you need to install a specific DBMS, posgresql (pgadmin4). Then each project has its own readme and requirement file, which will give you more information on dependencies and how to run it.
 
-installer l'environnement :
+install the :
 -Python 3.8.5
 -postgreSQL11
 -git
--installer npm
--Dans chaque projet, ouvrez le terminal, créer un environnement virtuel avec la commande python -m venv c:\path\to\myenv 
-	activer cette environnement (par exemple venv\Scripts\activate) et installer les packages: pip install to-requirements.txt
+-install npm
+-In each project, open the terminal and create a virtual environment with the command python -m venv c:\path\to\myenv 
+	activate this environment (for example venv\Scripts\activate) and install packages: pip install to-requirements.txt
 
 
 
 
 
-les étapes de démarage:
--premièrement Ouvrez le terminal, Démarrer ensuite l'exécutable dans le projet elector-recognizer-django(lisez le fichier readme):
----activer cette environnement (par la commande venv\Scripts\activate) si elle ne l'ai pas encore
---- et enfin coler cette commande "python manage.py runserver"
-- deuxièmement demarrer ensuite pgadmin4
--troisièmement demarrer enfin l'exécutable dans le projet elector-recognizer-vuejs: 
-ouvrez un autre terminal: accéder au dossier du projet elector-recognizer-vuejs par la commande cd /chemin_du dossier
-ensuite taper les commandes successives  pour la prmière utilisation : npm run serve ; npm run build ; npm run lint; mais pour la seconde utilisation tapez uniquement la commande npm run serve
-et enfin ouvrez lz navigateur à l'adresse: http://localhost:8085/
+start-up steps:
+-first open the terminal, then start the executable in the elector-recognizer-django project (read the readme file):
+---activate this environment (with the command venv\Scripts\activate) if it hasn't already
+--- and then paste this command "python manage.py runserver"
+- secondly, start pgadmin4
+-thirdly, start the executable in the elector-recognizer-vuejs project: 
+open another terminal: access the elector-recognizer-vuejs project folder with the command cd /path_offolder
+then type the following commands for the first use: npm run serve; npm run build; npm run lint; but for the second use type only the command npm run serve
+and finally open the browser at: http://localhost:8085/
